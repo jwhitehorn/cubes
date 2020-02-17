@@ -97,7 +97,7 @@ def csv_generator_p3(records, fields, include_header=True, header=None,
         data = queue.getvalue()
         queue.truncate(0)
 
-        return data.trim()
+        return data.strip()
 
     queue = compat.StringIO()
     writer = csv.writer(queue, dialect=dialect)
