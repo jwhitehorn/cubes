@@ -97,7 +97,7 @@ def csv_generator_p3(records, fields, include_header=True, header=None,
         data = queue.getvalue()
         queue.truncate(0)
 
-        return data
+        return data.trim()
 
     queue = compat.StringIO()
     writer = csv.writer(queue, dialect=dialect)
@@ -128,7 +128,7 @@ def xlsx_generator(records, fields, include_header=True, header=None):
 
 
 if compat.py3k:
-    csv_generator = csv_generator_p2
+    csv_generator = csv_generator_p3
 else:
     csv_generator = csv_generator_p2
 
