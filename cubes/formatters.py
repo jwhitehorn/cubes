@@ -128,7 +128,7 @@ def xlsx_generator(records, fields, include_header=True, header=None):
 
 
 if compat.py3k:
-    csv_generator = csv_generator_p3
+    csv_generator = csv_generator_p2
 else:
     csv_generator = csv_generator_p2
 
